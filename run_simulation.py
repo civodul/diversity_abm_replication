@@ -11,8 +11,6 @@ from datetime import datetime
 from mesa.batchrunner import BatchRunnerMP
 from Gmodel import GProblem
 
-GCE.PREFIX = "GrimSweepTournament" + datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-
 fixed_params = {"n": 2000, "k": 3, "N_agents": 10, "strategy": "both"}
 variable_params = {"smoothness": list(range(21)), "l": range(4, 31)}
 
