@@ -1,13 +1,7 @@
 import os
 from datetime import datetime
 from mesa.batchrunner import BatchRunnerMP
-
-import httpimport
-
-URL = "https://gist.githubusercontent.com/LukasWallrich/05f445821fbae694b37a205dc08b2b4f/raw/"
-
-with httpimport.remote_repo(["HPmodel"], URL):
-    from HPmodel import HPProblem
+from HPmodel import HPProblem
 
 fixed_params = {"n": 2000, "k": 3}
 

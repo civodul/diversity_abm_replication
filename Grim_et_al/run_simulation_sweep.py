@@ -1,13 +1,7 @@
 import os
 from datetime import datetime
 from mesa.batchrunner import BatchRunnerMP
-
-import httpimport
-
-URL = "https://gist.githubusercontent.com/LukasWallrich/42dea3211f0bde452781dd9b69c8199a/raw/"
-
-with httpimport.remote_repo(["Gmodel"], URL):
-    from Gmodel import GProblem
+from Gmodel import GProblem
 
 fixed_params = {"n": 2000, "k": 3, "N_agents": 10, "strategy": "both"}
 variable_params = {"smoothness": list(range(21)), "l": range(4, 31)}
