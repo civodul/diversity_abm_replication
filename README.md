@@ -16,7 +16,23 @@ Each of the two replications is contained in its own folder - `Hong and Page` an
 
 # Requirements
 
-To install the requirements, you can run
+Using [GNU Guix](https://guix.gnu.org), set up the complete software
+environment with:
+
+```
+guix time-machine -C channels.scm -- \
+  shell -m manifest.scm --container
+```
+
+The `channels.scm` file instructs how to [replicate the exact Guix
+revision used for
+testing](https://guix.gnu.org/manual/en/html_node/Replicating-Guix.html),
+while `manifest.scm` defines [the software
+environment](https://guix.gnu.org/manual/en/html_node/Writing-Manifests.html)
+of this computational experiment.
+
+Alternatively, if you are not using Guix, install Python 3 and then
+install all the packages in `requirements.txt` with:
 
 ```
     $ pip install -r requirements.txt
